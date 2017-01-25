@@ -19,7 +19,9 @@
 	$sql = "INSERT INTO `moves`(`game`, `x`, `y`, `color`) VALUES (:game,:x,:y,:color)";
 	$dd->query($sql, array(":game" => $game, ":x" => $x, ":y" => $y, ":color" => $color));
 	$qid = $dd->get_mngDB()->lastInsertId();
-
+	//introducir el dato por URL
+	//192.168.115.150/conecta4/move.php?game=1&x=4&y=5&color=1
+	
 	//creacion XML
 	$doc = new DOMDocument();
 	//crear elemento move

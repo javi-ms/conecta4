@@ -9,7 +9,7 @@
 	//conexion a la base de datos
 	$dd = new ConectaDB();
 	//consulta para  ver cuales son los juegos con estado 0 
-	$sql = "SELECT * FROM games WHERE estado=0";
+	$sql = "SELECT * FROM games where estado=0";
 	$resultado = $dd->query($sql, array());
 
 	// Creamos documento XML
